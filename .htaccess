@@ -1,0 +1,11 @@
+# Protect application source if document root is project root (shared hosting fallback)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(\.env) - [F,L,NC]
+    RewriteRule ^(app|config|database|storage|routes|scripts|tests)/ - [F,L,NC]
+</IfModule>
+
+# Prefer public/ as document root. If not possible, uncomment below to route into public:
+# RewriteEngine On
+# RewriteRule ^$ public/ [L]
+# RewriteRule (.*) public/$1 [L]

@@ -1,0 +1,7 @@
+<?php
+
+/**
+ * Optional local overrides (copy to config/local.php — never commit local.php).
+ * Prefer .env for secrets. This file can override returned config arrays if needed.
+ */
+return [];
